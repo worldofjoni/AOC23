@@ -2,9 +2,9 @@ name:                AOC23
 version:             0.1.0.0
 github:              "worldofjoni/AOC23"
 license:             MIT
-author:              "worldofjoni"
+author:              "Jonatan Z."
 maintainer:          "jonizi18902@gmail.com"
-copyright:           "2023 worldofjoni"
+copyright:           "2023 Jonatan Z."
 
 extra-source-files:
 - README.md
