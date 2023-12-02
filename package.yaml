@@ -1,7 +1,7 @@
 name:                AOC23
 version:             0.1.0.0
 github:              "worldofjoni/AOC23"
-license:             BSD-3-Clause
+license:             MIT
 author:              "worldofjoni"
 maintainer:          "jonizi18902@gmail.com"
 copyright:           "2023 worldofjoni"
