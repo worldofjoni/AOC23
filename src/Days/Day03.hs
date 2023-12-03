@@ -12,7 +12,7 @@ import qualified Data.HashMap as Hash (Map, insertWith, empty, filter, toList)
 runA :: IO ()
 runA = interactF "data/day03.txt" solveA
 runB :: IO ()
-runB = interactF "data/day03.test" solveB
+runB = interactF "data/day03.txt" solveB
 
 solveA :: String -> String
 solveA s = show . sum . map (readNum m) . filter (any special . adjacents m) $ nums where
@@ -20,7 +20,7 @@ solveA s = show . sum . map (readNum m) . filter (any special . adjacents m) $ n
     nums = findNums m
 
 solveB :: String -> String
-solveB s = show . map (product . map readNum . snd) . Hash.toList . Hash.filter ((==2). length) . foldl (\hm (n, g) -> Hash.insertWith (++) g [n] hm ) Hash.empty . concatMap (\n -> [(n, g) | g <- adjacentGears m n]) $ nums where
+solveB s = show . sum .  map (product . map (readNum m) . snd) . Hash.toList . Hash.filter ((==2). length) . foldl (\hm (n, g) -> Hash.insertWith (++) g [n] hm ) Hash.empty . concatMap (\n -> [(n, g) | g <- adjacentGears m n]) $ nums where
     m = lines s
     nums = findNums m
 
